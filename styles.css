@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Manrope', sans-serif;
+    /* background-color: var(--dark-blue); */
+    background: linear-gradient(135deg, #c22ed0, #5ffae0);
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 15%;
+    height: 100vh;
+    
+}
+
+:root {
+    /* PRIMARY COLORS */
+    --light-cyan: hsl(193, 38%, 86%);
+    --neon-green: hsl(150, 100%, 66%);
+
+    /* NEUTRAL COLORS */
+    --grayish-blue: hsl(217, 19%, 38%);
+    --dark-grayish-blue: hsl(217, 19%, 24%);
+    --dark-blue: hsl(218, 23%, 16%);
+
+}
+
+.container {
+    width: 80%;
+    background-color: var(--dark-grayish-blue);
+    border-radius: 0.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    text-align: center;
+    padding: 3em 1em 4em;
+    position: relative;
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* .container img:nth-child(4) {
+    display: none;
+} */
+
+.container div:first-child {
+    color: cyan;
+    text-transform: uppercase;
+}
+
+.container div:nth-child(2) {
+    font-size: 1.5em;
+}
+
+.container > img {
+  max-width: 60%;
+  border-radius: 0.5em;
+}
+
+button {
+    background-color: cyan;
+    width: 6em;
+    height: 6em;
+    border-radius: 1.5em;
+    position: absolute;
+    bottom: -40px;
+    transition: 0.4s;
+}
+
+button:hover {
+    background-color: #5ffae0;
+}
+
+/* Animation property */
+button {
+    animation: wiggle 2s linear infinite;
+}
+  
+  /* Keyframes */
+@keyframes wiggle {
+    0%, 7% {
+      transform: rotateZ(0);
+    }
+    15% {
+      transform: rotateZ(-15deg);
+    }
+    20% {
+      transform: rotateZ(10deg);
+    }
+    25% {
+      transform: rotateZ(-10deg);
+    }
+    30% {
+      transform: rotateZ(6deg);
+    }
+    35% {
+      transform: rotateZ(-4deg);
+    }
+    40%, 100% {
+      transform: rotateZ(0);
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 35%;
+    }
+}
+
+
